@@ -1,0 +1,625 @@
+1.) What is lexical structure?
+
+=> 	A programming language’s lexical structure specifies a set of some basic rules about how code should be written in it. Rules like what variable names look like, the delimiter characters for comments, and how one program statement is separated from the next. It is the lowest-level syntax of a language.
+
+	Unicode, Optional Semicolon, Whitespaces and Line Breaks, Case Sensitive, Comments, Literals and Identifiers, Reserved words.
+
+2.) What is Unicode?
+
+=> 	JavaScript is written in Unicode (It is an industry standard for the consistent encoding of written text). This means you can use Emojis as variable names, but more importantly, you can write identifiers in any language, for example, Japanese or Chinese, with some rules.
+
+3.) Explain all the keywords present in the JavaScript with examples.
+
+=> 	1. goto keyword
+	Used to return execution control to a specific location. In general, the goto can be accomplished by the break and continue keywords.
+
+	Example
+
+	var no=0;
+	sposition
+	document.write(" something print here ");
+	no++;
+	if(no < 10) goto sposition;
+	Now the same code we rewrite with break and continue keywords as
+
+	var no=0;
+	sposition: while(true) {
+	document.write(" something print here ");
+	no++;
+	if(no < 10) continue sposition;
+	break;
+	}
+
+	2. in keyword
+	It is an operator returns true if the specified property is present in the specified object, else it returns false.
+	Example
+
+	var fruits={f1: “apple”, f2: “banana”, f3: “orange”};
+	// output as true expected
+	console.log('apple' in fruits);
+
+	3. instanceof keyword
+	Returns true if the object is an instance of the class otherwise false
+
+ 	Example
+
+	var fruits=["apple", "banana", "orange"];
+	// Returns true
+	fruits instanceof Object;
+	// Returns true
+	fruits instanceof Array;
+	// Returns false
+	fruits instanceof String;
+
+	4. arguments keyword
+	Represents the list of parameters passed to the function when calling the function.
+
+	Example
+
+	const func = function(p1, p2, p3) {
+	const param = Array.from(arguments);
+	console.log(param) // [11, 22, 33]
+	}
+	func(11, 22, 33);
+
+	5. public keyword
+	It is an access modifier that can be used with attributes, classes, constructors and methods which make it accessible to other classes.
+
+	Example
+
+	public class Employee {
+	public String efn = "Joseph";
+	public String eln = "Doe";
+	}
+	class MainClass {
+	public static void main(String[] args) {
+	Employee obj = new Employee ();
+	System.out.println("Name= " + obj.efn + " " + obj.lname);
+	}
+	}
+
+	6. Do keyword
+	Used to define a do-while loop.
+
+	Example
+
+	var a=1;
+	do {
+	document.write("loop is running for " + a + "times</p>");
+	a++;
+	}
+	while(a <= 10); 
+
+	7. Function keyword
+	Used to define a function to execute a block of code.
+
+	Example
+
+	var func = function(){
+	return "Hello";
+	}
+	alert(func());
+
+	8. class* keyword
+	Used to define a class.
+
+	Example
+
+	public class Employee {
+	public String efn = "Joseph";
+	public String eln = "Doe";
+	}
+
+	9. return keyword
+	Used to return from the function or method with or without a value.
+
+	Example
+
+	var func = function(){
+	return "Hello";
+	}
+
+	10. Eval keyword
+	Used to evaluate a specified string. The eval use as a global function eval().
+
+	Example
+
+	function fun( ) {
+	var str1=2;
+	var str1=3;
+	var res = eval(new String(str1 + str2));
+	document.write(res);
+	}
+	fun();
+
+	11. For keyword
+	Used to define a loop, for loop to repeatedly execute a block of code until a condition true.
+
+	Example
+
+	for(var a=0; a<=10; a++) {
+	document.write("The loop is running for " + a + " times");
+	}
+
+	12. if keyword
+	Used to define a conditioned construct. if the statement is used to run a block of code if the condition is true.
+
+	Example
+
+	var date = new Date();
+	var day = date.getDay(); // Sunday  Saturday : 0  6
+	if(day==5) {
+	alert("This is weekend!");
+	} else {
+	alert("This is non-weekend!");
+
+	13. Break keyword
+	used into a loop to break or stop the execution of the loop.
+
+	Example
+
+	for(var a=0; a<=10; a++) {
+	if(a == 5)
+	break;
+	document.write("The loop is running for " + a + " times");
+	}
+
+	14. debugger keyword
+	Used to stop the execution of javascript code and call debugging function if define. Debugger keyword word the same as the break.
+
+	Example
+
+	var prod = 10 * 10;
+	debugger;
+	document.getElementbyId("id").innerHTML = prod;
+
+	15. Yield keyword
+	Used to pause and resume a generator function. The generator function is the same as a normal function but for returning a value in place of return it uses yield keyword.
+
+	Example
+
+	function* iter( a ) {
+	while (a < 4) {
+	yield a++;
+	}
+	}
+	const i = iter ( 1 );
+	console.log(i.next().value);  //return 1
+	console.log(i.next().value);  //return 2
+	console.log(i.next().value);  //return 3
+
+	16. Continue keyword
+	Used into a loop to continue the loop and skip the following statements inside the loop.
+
+	Example
+
+	for(var a=0; a<=10; a++) {
+	if(a == 5)
+	continue;
+	document.write("The loop is running for " + a + " times");
+	}
+
+	17. export* keyword
+	Used to export objects, functions or values from the module so that can be used in another program with the help of import statement.
+
+	Example
+
+	export let var fruits = ["apple", "banana", "orange"];// export an array
+	export const fruit= "apple";// export a constant
+
+	18. null keyword
+	Used to represent a special data type no value.
+
+	Example
+
+	var age = null;
+	alert(age)
+
+	19. New keyword
+	Used to create an object.
+
+	Example
+
+	Employee obj = new Employee ();
+
+	20. throw keyword
+	Used in a try block to explicitly throw an exception object.
+
+	Example
+
+	Var i=1
+	try {
+	if(i == "") throw "is Empty";
+	if(x > 0) throw "positive";
+	if(x < 0) throw "negative";
+	}
+	catch(msg) {
+	message.innerHTML = "Input " + msg;
+	}
+
+	21. while keyword
+	Used for while loop, while loop executes the block of code until the condition is true.
+
+	Example
+
+	var a=1;
+	while(a <= 10)
+	{
+	document.write("loop is running for " + a + "times</p>");
+	a++;
+	}
+
+	22. Delete keyword
+	Used to remove properties from an object.
+
+	Example
+
+	var fruits={f1: “apple”, f2: “banana”, f3: “orange”};
+	delete fruits.f1;
+
+	23. super* keyword
+	Used to call function or method of a parent class.
+
+	Example
+
+	super.disp(); //the disp is a method of a parent class
+
+	24. default keyword
+	Used in a switch expression to specify the actions to be performed if no case
+
+	Example
+
+	var date = new Date();
+	switch(date.getDay()) {
+	case 6:
+	alert("This is weekend.");
+	break;
+	case 0:
+	alert("This is weekend.");
+	default:
+	alert("Looking for a weekend.");
+	break;
+	}
+
+	25. protected keyword
+	An access modifier can be used with attributes, classes, constructors and methods which make it not accessible to other classes.
+
+	Example
+	
+	public class Employee {
+	protected String efn = "Joseph";
+	}
+
+	26. Package keyword
+	Used to identify java classes and to execute the java method in a javascript.
+
+	Example
+
+	inBlock['package'] = something;
+
+	27. Interface keyword
+	Used to define an interface (interface contains all abstract methods).
+
+	Example
+
+	interface car
+	method drive(whichSpeed)
+	method break( )
+	class car1 implements car
+	{
+	// Class code here
+	}
+
+	28. implements keyword
+	Used to implement the interface in a class.
+
+	Example
+
+	interface car
+	method drive(whichSpeed)
+	method break( )
+	class car1 implements car
+
+	29. With keyword
+	Used for iterating, just, in short, it is shortened for iteration.
+
+	Example
+
+	var  fruits = ["apple", "banana", "orange"];
+	for ( var i = fruits.length; i--; ) {
+	with ({ no : i }) {
+	link.onclick = function() {
+	alert(no);
+	};
+	}
+	}
+
+	30. import* keyword
+	Used to import the module in the javascript program.
+
+	Example
+
+	import * as alias from 'https://cdn.educba.com/modules/mymodule.js';
+
+	31. typeof keyword
+	Which used to return the data type of an operand.
+
+	Example
+
+	typeof(“hello”) // output as string
+
+	32. Var keyword
+	Used to declare a variable,
+
+	Example 
+
+	var  fruits = ["apple", "banana", "orange"];
+	var age=22;
+
+	33. await* keyword
+	Used to wait for javascript until the promise returns its result.
+
+	Example
+
+	async function fun() {
+	let promise = new Promise((resolve, reject) => {
+	setTimeout(() => resolve(" yes, it is done!"), 100)
+	});
+	let res = await promise; // wait until the promise returns us a value
+	alert(result); // output give yes, it is done
+	}
+	};
+	fun();
+
+	34. enum* keyword
+	Used to define a predefined list.
+
+	Example
+
+	const fruits={
+	APPLE: 'apple',
+	BANANA: 'banana',
+	Orange: 'orange',
+	}
+	let fruit =fruits.APPLE
+	if(!fruit){
+	throw new Error(' fruit is not defined ')
+	}
+	switch( fruit ){
+	case fruit.APPLE: alert("This is an apple.");
+	break;
+	case fruit.BANANA: alert("This is a banana.");
+	break;
+	case fruit.ORANGE: alert("This is an orange.");
+	}
+
+	35. try keyword
+	Used for exception handling to check a block of code for errors.
+
+	Example 
+
+	Var i=1
+	try {
+	if(i == "") throw "is Empty";
+	if(x > 0) throw "positive";
+	if(x < 0) throw "negative";
+	}
+	catch(msg) {
+	message.innerHTML = "Input " + msg;
+	}
+
+	36. Catch keyword
+	Again used in exception handling to handle the error.
+
+	Example
+
+	Var i=1
+	try {
+	if(i == "") throw "is Empty";
+	if(x > 0) throw "positive";
+	if(x < 0) throw "negative";
+	}
+	catch(msg) {
+	message.innerHTML = " Input " + msg;
+	}
+
+	37. finally keyword
+	Used in exception handling, finally block of code always execute regardless of whether the error is generating or not.
+
+	Example
+
+	Var i=1
+	try {
+	if(i == "") throw "is Empty";
+	if(x > 0) throw "positive";
+	if(x < 0) throw "negative";
+	}
+	
+	message.innerHTML = "Input " + msg;
+	}
+	finally
+	{
+	alert("This is a finally code, which always execute.");
+
+	38. Const keyword
+	Used to define a constant variable and that cannot be farther reassigned.
+
+	Example
+
+	const age=22;
+
+	39. private keyword
+	IS an access modifier can be used with attributes, classes, constructors and methods which make it not accessible to other classes.
+
+	Example
+
+	public class Employee {
+	private String efn = "Joseph";
+	}
+	class MainClass {
+	public static void main(String[] args) {
+	Employee obj = new Employee ();
+	System.out.println("Name= " + obj.efn + " " + obj.lname);// gives error
+	}
+	}
+
+	40. True keyword
+	Used to store or represent primitive data type Boolean ‘true’.
+
+	Example
+
+	var inp = true;
+
+	41. False keyword
+	Used to store or represent primitive data type Boolean ‘false’.
+
+	Example
+
+	var inp = false;
+
+	42. Void keyword
+	used to evaluates an expression and returns undefined. A void operator is frequently used to get the undefined primitive value.
+
+	Example
+
+	<a href = "javascript:void(0);">
+	click link
+	</a>
+
+	43. Case keyword
+	Used in a switch-case construct, where the value of an expression compares with the case clause value and executes the statements associated with the case whose case value is matched.
+
+	Example
+
+	var date = new Date();
+	switch(date.getDay()) {
+	case 6:
+	alert("This is weekend.");
+	break;
+	case 0:
+	alert("This is weekend.");
+	default:
+	alert("Looking for a weekend.");
+	break;
+	}
+
+	44. switch keyword
+	Used in a switch-case construct, where switch evaluates an expression.
+
+	Example
+
+	var date = new Date();
+	switch(date.getDay()) {
+	case 6:
+	alert("This is weekend.");
+	break;
+	case 0:
+	alert("This is weekend.");
+	default:
+	alert("Looking for a weekend.");
+	break;
+	}
+
+	45. extends* keyword
+	Used in class declarations to create a class that inherits another class.
+
+	Example
+
+	class Employee extends Person {
+	constructor(name, eid, salary) {
+	super(name);
+	}
+	get incsalary() {
+	return this.salary * 0.2;
+	}
+	}
+
+	46. This keyword
+	Used to refer to the current object.
+
+	Example
+
+	class Employee extends Person {
+	constructor(name, eid, salary) {
+	super(name);
+	}
+	get incsalary() {
+	return this.salary * 0.2;
+	}
+	}
+
+	47. let* keyword
+	Used to declare a variable limited to a scope of a block of code, unlike a variable declared by the var keyword.
+
+	Example
+
+	let var fruits = ["apple", "banana", "orange"];
+
+	48. else keyword
+	Used in the if-else statement, the else indicates the block of statements to be executed if the expression evaluates false.
+
+	Example
+
+	var date = new Date();
+	var day = date.getDay(); // Sunday - Saturday : 0 - 6
+	if(day==5) {
+	alert("This is weekend!");
+	} else {
+	alert("This is non-weekend!");
+
+	49. Static keyword
+	Used to define a static method in a class. Static methods are those methods that are not called on the object.
+
+	Example
+
+	class Employee extends Person {
+	constructor(name, eid, salary) {
+	super(name);
+	}
+	static disp()
+	{
+	return "This is static method "
+	}
+	}
+	document.writeln( Employee.disp()  );
+
+4.) What are shorthand operators, explain with a suitable example?
+
+=>   Name					Shorthand operator	Meaning
+     Assignment	x = f()		x = f()			x = f()
+     Addition assignment		x += f()			x = x + f()
+     Subtraction assignment		x -= f()			x = x - f()
+     Multiplication assignment	x *= f()			x = x * f()
+     Division assignment		x /= f()			x = x / f()
+     Remainder assignment		x %= f()			x = x % f()
+     Exponentiation assignment	x **= f()			x = x ** f()
+     Left shift assignment		x <<= f()			x = x << f()
+     Right shift assignment		x >>= f()			x = x >> f()
+     Unsigned right shift ass		x >>>= f()			x = x >>> f()
+     Bitwise AND assignment		x &= f()			x = x & f()
+     Bitwise XOR assignment		x ^= f()			x = x ^ f()
+     Bitwise OR assignment		x |= f()			x = x | f()
+     Logical AND assignment		x &&= f()			x && (x = f())
+     Logical OR assignment		x ||= f()			x || (x = f())
+     Logical nullish assignment	x ??= f()			x ?? (x = f())
+
+5.) What is “use Strict” in JavaScript?
+
+=> The "use strict" directive was new in ECMAScript version 5.
+
+   It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+
+   The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+
+   With strict mode, you can not, for example, use undeclared variables.
+
+   All modern browsers support "use strict" except Internet Explorer 9 and lower.
+
+   Declaring Strict Mode
+   Strict mode is declared by adding "use strict"; to the beginning of a script or a function.
+
+   Declared at the beginning of a script, it has global scope (all code in the script will execute in strict mode):
+
+   Example
+   "use strict";
+    x = 3.14;       // This will cause an error because x is not declared
