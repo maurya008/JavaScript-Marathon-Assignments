@@ -1,0 +1,43 @@
+1) Explain the use of JavaScript ( or What you can do using a JavaScript)
+
+=> JavaScript is a scripting or programming language that allows you to implement complex feature on web pages.
+	it enables you to create dynamically updating content controls multimedia, animate images and pretty much everything like,
+	Browser, mobile, backend, desktop, APIs, Cloud, Typescript, machine learning DSA, Blockchain.
+
+2) What is the difference between client-side and server-side?
+
+=> Code running in the browser are know as client-side code and is primarily concerned with improving the appearance and 
+behavior of a rendered web page. This includes selecting and styling UI components, creating layouts, navigation, form validation, etc.
+Server-side programming is very useful because it allows us to efficiently deliver information tailored for individual users and thereby create a much better user experience.
+Companies like Amazon use server-side programming to construct search results for products, make targeted product suggestions based on client preferences and previous buying habits, simplify purchases, etc.
+Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself 
+(e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
+
+3) What is Nodejs?
+
+=> Node.js is a cross-platform JavaScript runtime environment that allows developers to build server-side and network applications with JavaScript.
+
+4) Explain Scope in JavaScript?
+
+=> A function serves as a closure in JavaScript, and thus creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or 
+   within other functions. For instance, the following is invalid:
+		function exampleFunction() {
+    		var x = "declared inside function";  // x can only be used in exampleFunction
+    		console.log("Inside function");
+    		console.log(x);
+		}
+
+		console.log(x);  // Causes error
+
+5) JavaScript is asynchronous or synchronous.
+
+=> JavaScript is a synchronous.
+
+6) JavaScript is Single-threaded or Multi-threaded.
+
+=> Javascript is a single threaded language. This means it has one call stack and one memory heap. As expected, it executes code in order and must finish executing a piece code before moving onto the next.
+
+7) Explain DOM in your own word.
+
+=> The Document Object Model (DOM) is the data representation of the objects that comprise the structure and content of a document on the web. The Document Object Model (DOM) is a programming interface for web documents.
+   It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
